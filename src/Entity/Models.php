@@ -47,6 +47,16 @@ class Models
      */
     private $pourcentage;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $identifiant;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $mdp;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +130,28 @@ class Models
     public function setPourcentage(string $pourcentage): self
     {
         $this->pourcentage = $pourcentage;
+
+        return $this;
+    }
+    public function getIdentifiant(): ?string
+    {
+        return $this->identifiant;
+    }
+
+    public function setIdentifiant(string $identifiant): self
+    {
+        $this->identifiant = $identifiant;
+
+        return $this;
+    }
+    public function getMdp(): ?string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(string $mdp): self
+    {
+        $this->mdp = $mdp;
 
         return $this;
     }
