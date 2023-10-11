@@ -10,6 +10,7 @@
         <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, noimageindex, notranslate, nocache" />
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta name="generator" content="EasyAdmin" />
+        <link rel="shortcut icon" href="/favicon.ico">
     {% endblock head_metas %}
 
     {% set page_title_block_output %}{% block page_title %}{{ block('content_title') }}{% endblock %}{% endset %}
@@ -159,6 +160,7 @@
                                                 <a class="logo" title="{{ ea.dashboardTitle|striptags }}" href="{{ path(ea.dashboardRouteName) }}">
                                                     <span class="logo-custom">{{ ea.dashboardTitle|raw }}</span>
                                                     <span class="logo-compact"><i class="fas fa-home"></i></span>
+                                                    
                                                 </a>
                                             {% endblock header_logo %}
                                         </div>
@@ -169,6 +171,7 @@
 
                             {% block main_menu_wrapper %}
                                 {{ include(ea.templatePath('main_menu')) }}
+                                <p>Voici le lien de la formation <a href="https://google.fr" target="_blank"> OFM </a></p>
                             {% endblock main_menu_wrapper %}
                         {% endblock sidebar %}
 
